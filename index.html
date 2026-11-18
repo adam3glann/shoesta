@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4f1e9" />
+  <meta name="description" content="Shoesta — good shoes for wherever life takes you." />
+  <title>Shoesta — Step into your own</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement"><span>GOOD SHOES. GOOD DAYS.</span><span class="announcement-detail">Free shipping on orders over $100 <span aria-hidden="true">↗</span></span></div>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Shoesta home">shoesta<span>®</span></a>
+    <button class="mobile-menu" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#shop" class="nav-link active">Shop all</a><a href="#shop" class="nav-link">New arrivals</a><a href="#story" class="nav-link">Our story</a>
+    </nav>
+    <div class="header-actions"><button class="icon-button search-trigger" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.2 4.2"/></svg></button><button class="icon-button account-trigger" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4.8 20c.5-3.5 3.3-5.5 7.2-5.5s6.7 2 7.2 5.5"/></svg></button><button class="bag-button" aria-label="Shopping bag">Bag <span class="bag-count">0</span></button></div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span class="eyebrow-line"></span> YOUR EVERYDAY, ELEVATED</p><h1>Step into<br /><em>your own.</em></h1><p class="hero-description">The kind of shoes that feel like you from the very first step. Made for real life, and all the good stuff in between.</p><a href="#shop" class="button button-dark">Find your pair <span>↗</span></a><div class="hero-note"><span class="note-star">✳</span><span>Thoughtfully made.<br />Impossible to leave behind.</span></div></div>
+      <div class="hero-image-wrap"><div class="hero-image" role="img" aria-label="Sculptural red leather sneaker on a sunny studio backdrop"></div><div class="image-label"><span>01 / 04</span><span>THE EVERYDAY EDIT</span></div><div class="hero-stamp"><span>MADE TO</span><strong>MOVE</strong><span>WITH YOU</span></div></div>
+      <div class="hero-vertical">DESIGNED FOR THE IN-BETWEEN</div>
+      <div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+    <section class="category-strip" aria-label="Shop by category"><span class="strip-label">A LITTLE SOMETHING FOR EVERY STEP</span><div class="category-links"><a href="#shop" data-filter="All">All shoes <span>↗</span></a><a href="#shop" data-filter="Sneakers">Sneakers <span>↗</span></a><a href="#shop" data-filter="Everyday">Everyday <span>↗</span></a><a href="#shop" data-filter="New">Just landed <span>↗</span></a></div></section>
+    <section class="shop-section" id="shop"><div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> THE GOOD STUFF</p><h2>Find your <em>footing.</em></h2></div><a href="#shop" class="text-link" data-filter="All">Shop all shoes <span>↗</span></a></div><div class="shop-toolbar"><p><span id="product-count">04</span> GOOD THINGS TO WALK IN</p><button class="sort-button">Sort by <span>Featured</span><span class="sort-chevron">⌄</span></button></div><div class="product-grid" id="product-grid"></div></section>
+    <section class="manifesto" id="story"><div class="manifesto-image"></div><div class="manifesto-copy"><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> WALK YOUR WAY</p><h2>Life moves.<br /><em>Go with it.</em></h2><p>We think good shoes should get you out the door, out of your head, and into your day. So we make the pairs you’ll reach for without thinking twice.</p><a href="#shop" class="button button-light">A little about us <span>↗</span></a><span class="manifesto-mark">s.</span></div></section>
+    <section class="quote-strip"><span class="quote-star">✳</span><p>“THE PAIR YOU PUT ON FOR A QUICK COFFEE<br class="desktop-break" /> AND ACCIDENTALLY WEAR ALL DAY.”</p><span class="quote-credit">— THE SHOESTA PROMISE</span></section>
+    <section class="newsletter"><div><p class="eyebrow"><span class="eyebrow-line"></span> GOOD THINGS IN YOUR INBOX</p><h2>A little more <em>good stuff.</em></h2></div><form class="newsletter-form"><label class="sr-only" for="email">Email address</label><input id="email" type="email" placeholder="Your email address" required /><button type="submit" aria-label="Subscribe">↗</button><p class="form-message" aria-live="polite"></p></form></section>
+  </main>
+  <footer class="site-footer"><a class="wordmark footer-wordmark" href="#top">shoesta<span>®</span></a><p>Good shoes for wherever life takes you.</p><div class="footer-links"><a href="#shop">Instagram ↗</a><a href="#story">Contact ↗</a><a href="#top">© Shoesta 2025</a></div></footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <dialog class="search-dialog"><form method="dialog" class="search-panel"><button class="dialog-close" aria-label="Close search">×</button><p class="eyebrow"><span class="eyebrow-line"></span> LOOKING FOR SOMETHING?</p><input type="search" placeholder="Try ‘sneakers’" aria-label="Search products" /><p class="search-hint">Try “sneakers”, “everyday”, or a color.</p><div class="search-results"></div></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
