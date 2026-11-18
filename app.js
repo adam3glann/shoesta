@@ -5,7 +5,7 @@ const arrivals=[
   {name:'The Day Trip',color:'Rose / Sand',price:108,image:'photo-1525966222134-fcfa99b8ae77',tag:'JUST LANDED'}
 ];
 const grid=document.querySelector('#arrival-grid');
-if(grid)grid.innerHTML=arrivals.map(item=>`<article class="arrival-card"><a class="arrival-photo" href="product.html"><img src="https://images.unsplash.com/${item.image}?auto=format&fit=crop&w=800&q=85" alt="${item.name}, ${item.color}" loading="lazy"><span class="arrival-tag">${item.tag}</span><span class="arrival-quick">VIEW THE PAIR <span style="float:right">↗</span></span></a><div class="arrival-meta"><div><h3>${item.name}</h3><p>${item.color}</p></div><strong>$${item.price}</strong></div></article>`).join('');
+if(grid)grid.innerHTML=arrivals.map(item=>`<article class="arrival-card"><a class="arrival-photo" href="product.html"><img src="https://images.unsplash.com/${item.image}?auto=format&fit=crop&w=800&q=85" alt="${item.name}, ${item.color}" loading="lazy"><span class="arrival-tag">${item.tag}</span><span class="arrival-quick">VIEW PRODUCT</span></a><div class="arrival-meta"><div><h3>${item.name}</h3><p>${item.color}</p></div><strong>$${item.price}</strong></div></article>`).join('');
 const toast=document.querySelector('.toast');let toastTimer;
 function getBag(){try{return Number(localStorage.getItem('shoesta-bag')||0)}catch{return 0}}
 function setBag(value){try{localStorage.setItem('shoesta-bag',String(value))}catch{}document.querySelectorAll('.bag-count').forEach(el=>el.textContent=value)}
@@ -13,6 +13,7 @@ function showToast(message){if(!toast)return;toast.textContent=message;toast.cla
 setBag(getBag());
 document.querySelector('.menu-toggle')?.addEventListener('click',event=>{const button=event.currentTarget,open=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!open));document.querySelector('.nav-main')?.classList.toggle('open',!open)});
 document.querySelector('.search-open')?.addEventListener('click',()=>document.querySelector('.search-dialog')?.showModal());
+document.querySelector('.cart-open')?.addEventListener('click',()=>showToast(`${getBag()} items in your bag`));
 document.querySelector('.search-close')?.addEventListener('click',()=>document.querySelector('.search-dialog')?.close());
 document.querySelector('.search-dialog input')?.addEventListener('input',event=>{const result=document.querySelector('.search-result');result.hidden=!event.target.value.trim()});
 document.querySelector('.signup')?.addEventListener('submit',event=>{event.preventDefault();event.currentTarget.querySelector('.signup-message').textContent='You’re on the list. See you out there.';event.currentTarget.reset()});
